@@ -11,8 +11,9 @@ import UIKit
 class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let reuseIdentifier = "Cell"
-    private let colors = [UIColor.red, .green]
-    private let texts = ["Pan And Animate", "CADisplayLink"]
+    private let cellColors = [UIColor.red, .green, .blue]
+    private let textLabels = ["Pan And Animate", "CADisplayLink", "Chain Animation"]
+    private let textColors = [UIColor.black, .black, .white]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +37,13 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return cellColors.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
-        cell.backgroundColor = colors[indexPath.row]
+        cell.backgroundColor = cellColors[indexPath.row]
         
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +53,8 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
             title.centerYAnchor.constraint(equalTo: cell.centerYAnchor),
             ])
         
-        title.text = texts[indexPath.row]
+        title.text = textLabels[indexPath.row]
+        title.textColor = textColors[indexPath.row]
 
         return cell
     }
@@ -63,9 +65,9 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
             navigationController?.pushViewController(PanAnimateVC(), animated: true)
         } else if indexPath.row == 1 {
             navigationController?.pushViewController(CounterVC(), animated: true)
+        } else if indexPath.row == 2 {
+            navigationController?.pushViewController(ChainAnimateVC(), animated: true)
         }
-        
-        
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout

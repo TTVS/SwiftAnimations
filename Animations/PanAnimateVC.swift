@@ -10,6 +10,10 @@ import UIKit
 
 class PanAnimateVC: UIViewController {
     
+    deinit {
+        print("Retreiving memory for PanAnimateVC")
+    }
+    
     let iconsContainerView: UIView = {
         let v = UIView()
         v.backgroundColor = .white

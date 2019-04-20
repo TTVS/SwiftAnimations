@@ -10,6 +10,10 @@ import UIKit
 
 class CounterVC: UIViewController {
     
+    deinit {
+        print("Retreiving memory for CounterVC")
+    }
+    
     private var numberStartValue: Double = 0
     private let numberEndValue: Double = 1200
     
@@ -34,7 +38,7 @@ class CounterVC: UIViewController {
         return l
     }()
     
-    private var displayLink: CADisplayLink!
+    private var displayLink: CADisplayLink?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +49,21 @@ class CounterVC: UIViewController {
         setupLayout()
         
         // use CADisplayLink to animate text
-        setupTextAnimation()
+        startDisplayLink()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        displayLink.remove(from: .main, forMode: .default)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startDisplayLink()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopDisplayLink()
+    }
+    
+    private func stopDisplayLink() {
+        displayLink?.invalidate()
     }
     
     private func setupView() {
@@ -70,11 +84,16 @@ class CounterVC: UIViewController {
         stackView.frame = view.frame   
     }
     
-    private func setupTextAnimation() {
-        displayLink = CADisplayLink(target: self, selector: #selector(handleUpdate))
+    private func startDisplayLink() {
+        stopDisplayLink()
+        
+        let link = CADisplayLink(target: self, selector: #selector(handleUpdate))
         
         // register the display link to the run loop
-        displayLink.add(to: .main, forMode: .default)
+        link.add(to: .main, forMode: .default)
+        
+        displayLink = link
+        
     }
     
     // this gets called every loop in the internal time interval
