@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PanAnimateVC.swift
 //  Animations
 //
 //  Created by Terranz on 19/4/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PanAnimateVC: UIViewController {
     
     let iconsContainerView: UIView = {
         let v = UIView()
@@ -62,6 +62,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Pan and Animate"
+        
         setupViewLayout()
         setupLongPressGesture()
     }
