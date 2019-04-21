@@ -37,16 +37,7 @@ class AnimatedLabel: UILabel {
         
         super.init(frame: .zero)
         
-        text = "\(startValue)"
-        textAlignment = .center
-        numberOfLines = 0
-        font = UIFont.systemFont(ofSize: 20, weight: .heavy)
-        
-        backgroundColor = .white
-        layer.cornerRadius = 5
-        layer.masksToBounds = true
-        
-        beginCounting()
+        commonInit()
     }
     
     // Initialiser for Strings
@@ -63,16 +54,19 @@ class AnimatedLabel: UILabel {
         self.animationDuration = animationDuration
         super.init(frame: .zero)
         
+        commonInit()
+    }
+    
+    private func commonInit() {
         text = "\(startValue)"
         textAlignment = .center
         numberOfLines = 0
-        font = UIFont.systemFont(ofSize: 28, weight: .heavy)
-        
+        font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+    
         backgroundColor = .white
         layer.cornerRadius = 5
         layer.masksToBounds = true
-        
-        
+    
         beginCounting()
     }
     

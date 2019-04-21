@@ -46,6 +46,8 @@ class ChainAnimateVC: UIViewController {
         
         addStackView()
         
+        addInstructions()
+        
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapAnimations)))
     }
     
@@ -57,6 +59,19 @@ class ChainAnimateVC: UIViewController {
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -100),
+            ])
+    }
+    
+    private func addInstructions() {
+        let instructions = UILabel()
+        instructions.text = "Tap anywhere on the screen"
+        instructions.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        instructions.translatesAutoresizingMaskIntoConstraints = false
+        instructions.layer.zPosition = 10
+        view.addSubview(instructions)
+        NSLayoutConstraint.activate([
+            instructions.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            instructions.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
     }
     
