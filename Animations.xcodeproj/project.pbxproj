@@ -79,9 +79,9 @@
 		030CD870226AD30D00CEE9D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				030CD876226C2D8E00CEE9D0 /* Counter CADisplayLink */,
 				030CD86A2269EB4600CEE9D0 /* RootCollectionVC.swift */,
 				030CD85A2269D8D000CEE9D0 /* PanAnimateVC.swift */,
+				030CD876226C2D8E00CEE9D0 /* Counter CADisplayLink */,
 				030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */,
 				030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */,
 			);
