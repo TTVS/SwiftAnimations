@@ -11,9 +11,9 @@ import UIKit
 class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let reuseIdentifier = "Cell"
-    private let cellColors = [UIColor.red, .green, .blue]
-    private let textLabels = ["Pan And Animate", "CADisplayLink", "Chain Animation"]
-    private let textColors = [UIColor.black, .black, .white]
+    private let cellColors = [UIColor.red, .green, .blue, .purple]
+    private let textLabels = ["Pan And Animate", "CADisplayLink", "Chain Animation", "CircleLoaderVC"]
+    private let textColors = [UIColor.black, .black, .white, .white]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,6 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
     // MARK: - UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-
         return 1
     }
 
@@ -67,6 +66,8 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
             navigationController?.pushViewController(CounterVC(), animated: true)
         } else if indexPath.row == 2 {
             navigationController?.pushViewController(ChainAnimateVC(), animated: true)
+        } else if indexPath.row == 3 {
+            navigationController?.pushViewController(CircleLoaderVC(), animated: true)
         }
     }
     

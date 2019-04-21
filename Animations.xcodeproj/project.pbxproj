@@ -14,6 +14,7 @@
 		030CD86B2269EB4600CEE9D0 /* RootCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD86A2269EB4600CEE9D0 /* RootCollectionVC.swift */; };
 		030CD86D226ABDC500CEE9D0 /* CounterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD86C226ABDC500CEE9D0 /* CounterVC.swift */; };
 		030CD86F226AC92000CEE9D0 /* ChainAnimateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */; };
+		030CD872226ADCC900CEE9D0 /* CircleLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		030CD86A2269EB4600CEE9D0 /* RootCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionVC.swift; sourceTree = "<group>"; };
 		030CD86C226ABDC500CEE9D0 /* CounterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterVC.swift; sourceTree = "<group>"; };
 		030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainAnimateVC.swift; sourceTree = "<group>"; };
+		030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoaderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				030CD85A2269D8D000CEE9D0 /* PanAnimateVC.swift */,
 				030CD86C226ABDC500CEE9D0 /* CounterVC.swift */,
 				030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */,
+				030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				030CD86F226AC92000CEE9D0 /* ChainAnimateVC.swift in Sources */,
 				030CD85B2269D8D000CEE9D0 /* PanAnimateVC.swift in Sources */,
 				030CD86B2269EB4600CEE9D0 /* RootCollectionVC.swift in Sources */,
+				030CD872226ADCC900CEE9D0 /* CircleLoaderVC.swift in Sources */,
 				030CD8592269D8D000CEE9D0 /* AppDelegate.swift in Sources */,
 				030CD86D226ABDC500CEE9D0 /* CounterVC.swift in Sources */,
 			);
