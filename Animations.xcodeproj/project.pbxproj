@@ -16,6 +16,8 @@
 		030CD86F226AC92000CEE9D0 /* ChainAnimateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */; };
 		030CD872226ADCC900CEE9D0 /* CircleLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */; };
 		030CD875226C1ECF00CEE9D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD874226C1ECF00CEE9D0 /* Extensions.swift */; };
+		030CD878226C2DB400CEE9D0 /* StatsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD877226C2DB400CEE9D0 /* StatsStackView.swift */; };
+		030CD87A226C2DE600CEE9D0 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CD879226C2DE600CEE9D0 /* AnimatedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainAnimateVC.swift; sourceTree = "<group>"; };
 		030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoaderVC.swift; sourceTree = "<group>"; };
 		030CD874226C1ECF00CEE9D0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		030CD877226C2DB400CEE9D0 /* StatsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsStackView.swift; sourceTree = "<group>"; };
+		030CD879226C2DE600CEE9D0 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +79,23 @@
 		030CD870226AD30D00CEE9D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				030CD876226C2D8E00CEE9D0 /* Counter CADisplayLink */,
 				030CD86A2269EB4600CEE9D0 /* RootCollectionVC.swift */,
 				030CD85A2269D8D000CEE9D0 /* PanAnimateVC.swift */,
-				030CD86C226ABDC500CEE9D0 /* CounterVC.swift */,
 				030CD86E226AC92000CEE9D0 /* ChainAnimateVC.swift */,
 				030CD871226ADCC900CEE9D0 /* CircleLoaderVC.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		030CD876226C2D8E00CEE9D0 /* Counter CADisplayLink */ = {
+			isa = PBXGroup;
+			children = (
+				030CD86C226ABDC500CEE9D0 /* CounterVC.swift */,
+				030CD877226C2DB400CEE9D0 /* StatsStackView.swift */,
+				030CD879226C2DE600CEE9D0 /* AnimatedLabel.swift */,
+			);
+			name = "Counter CADisplayLink";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +171,9 @@
 				030CD86F226AC92000CEE9D0 /* ChainAnimateVC.swift in Sources */,
 				030CD85B2269D8D000CEE9D0 /* PanAnimateVC.swift in Sources */,
 				030CD86B2269EB4600CEE9D0 /* RootCollectionVC.swift in Sources */,
+				030CD87A226C2DE600CEE9D0 /* AnimatedLabel.swift in Sources */,
 				030CD872226ADCC900CEE9D0 /* CircleLoaderVC.swift in Sources */,
+				030CD878226C2DB400CEE9D0 /* StatsStackView.swift in Sources */,
 				030CD8592269D8D000CEE9D0 /* AppDelegate.swift in Sources */,
 				030CD86D226ABDC500CEE9D0 /* CounterVC.swift in Sources */,
 				030CD875226C1ECF00CEE9D0 /* Extensions.swift in Sources */,
