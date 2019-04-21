@@ -11,9 +11,8 @@ import UIKit
 class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let reuseIdentifier = "Cell"
-    private let cellColors = [UIColor.red, .green, .blue, .purple]
+    private let textColors = [UIColor.cyan, .green, .blue, .purple]
     private let textLabels = ["Pan And Animate", "CADisplayLink", "Chain Animation", "CircleLoaderVC"]
-    private let textColors = [UIColor.black, .black, .white, .white]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         title = "Main Menu"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .backgroundColor
         
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -36,16 +35,16 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellColors.count
+        return textLabels.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
-        cell.backgroundColor = cellColors[indexPath.row]
-        
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.font = UIFont.boldSystemFont(ofSize: 20)
+        
         cell.addSubview(title)
         NSLayoutConstraint.activate([
             title.centerXAnchor.constraint(equalTo: cell.centerXAnchor),
@@ -54,7 +53,8 @@ class RootCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         
         title.text = textLabels[indexPath.row]
         title.textColor = textColors[indexPath.row]
-
+        cell.backgroundColor = .outlineStrokeColor
+        
         return cell
     }
     
